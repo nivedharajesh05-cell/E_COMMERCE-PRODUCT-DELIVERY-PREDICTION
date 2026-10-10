@@ -62,7 +62,8 @@ elif page == "Predict Shipment":
 
     if submit_btn:
         try:
-            model = load_model()
+            bundle = load_model()
+            model = bundle["model"]
 
             input_df = pd.DataFrame([{
                 'Customer_care_calls': customer_care_calls,
